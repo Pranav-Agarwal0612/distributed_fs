@@ -10,7 +10,7 @@ func TestTCPTransport(t *testing.T) {
 	listenAddr := ":4000"
 	tcpOpts := TCPTransportOpts{
 		ListenAddr:    listenAddr,
-		Decoder:       GOBDecoder{},
+		Decoder:       DefaultDecoder{},
 		HandshakeFunc: NOPHandshakeFunc,
 	}
 	tr := NewTCPTransport(tcpOpts)
